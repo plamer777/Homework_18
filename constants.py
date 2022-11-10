@@ -1,7 +1,7 @@
-# этот файл для глобальных констант. чтобы не хардкодить строки/числа в коде, выносите их сюда.
-# например вместо C:\\Windows в коде, создайте константу WINDOWS_PATH здесь и присвойте ей значение
+"""This unit provides constants for the application"""
+import os
+# --------------------------------------------------------------------------
 
-# Пример
-
-# CONSTANT_NAME = "value"
-# LOG_DIR = "logs"
+DB_PATH = os.path.abspath('data')
+DATABASE_URI = f'sqlite:///cinema.db'
+JSON_DATA_PATH = os.path.join('data', 'data.json')

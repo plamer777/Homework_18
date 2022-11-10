@@ -1,8 +1,10 @@
-# Это файл конфигурации приложения, здесь может хранится путь к бд, ключ шифрования, что-то еще.
-# Чтобы добавить новую настройку, допишите ее в класс.
+"""The unit contains different settings for the Flask application"""
+from constants import DATABASE_URI
 
-# Пример
 
-# class Config(object):
-#     DEBUG = True
-#     SECRET_HERE = '249y823r9v8238r9u'
+class Config:
+    """This class serves to provide all necessary settings for a Flask app"""
+    JSON_AS_ASCII = False
+    JSON_SORT_KEYS = False
+    SQLALCHEMY_DATABASE_URI = DATABASE_URI
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
